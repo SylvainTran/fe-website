@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Yomogi&display=swap"
+      rel="stylesheet"
+    />
+    <title>Les Franciscains de l'Emmanuel</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 1.5em;
+        padding: 15px;
+        text-align: center;
+        z-index: 300;
+
+        font-family: "Yomogi", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin-right: 6em;
+        display: flex;
+        justify-content: right;
+      }
+
+      .navbar li {
+        margin: 0 15px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+
+      .navbar a:hover {
+        color: rgb(22, 247, 255);
+        background-color: #feb47b;
+      }
+
+      /* .banner {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+      } */
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+      }
+
+      .one {
+        text-align: center;
+        background: linear-gradient(to bottom, #ff7e5f, #cb116b);
+        font-family: "Londrina Shadow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        cursor: pointer;
+      }
+
+      .one h1 {
+        margin: 1.5em;
+        opacity: 0.3;
+      }
+
+      .two {
+        background: linear-gradient(to bottom, #0f48cf, #072771);
+        font-family: "Yomogi", cursive;
+        font-weight: 400;
+        font-style: normal;
+        position: absolute;
+        /* top: 150px; */
+
+        text-align: center;
+
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+      }
+
+      .four {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        background: linear-gradient(to bottom, #ff7e5f, #cb116b);
+        font-family: "Londrina Shadow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .five {
+        background: linear-gradient(to bottom, #8af7e8, #0eb39d);
+        font-family: "Yomogi", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+
+        display: flex;
+        align-content: space-between;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow: hidden;
+
+		text-align: center;
+      }
+
+	  .five h5 {
+		  margin: 2em;
+	  }
+
+      .two h1,
+      .two h3 {
+        margin-right: 1.5em;
+      }
+
+      .two h3 {
+        margin-bottom: 1.5em;
+        font-style: italic;
+      }
+
+      .three {
+        background: linear-gradient(to bottom, #ffffff, #ffffff);
+        font-family: "Yomogi", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .big-categories {
+        cursor: pointer;
+        display: flex;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+      .big-categories article {
+        height: 100vh;
+        background-size: cover;
+        background-position-y: center;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        text-align: center;
+        flex: 1; /* Makes each item take equal space */
+
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        overflow: hidden;
+
+        opacity: 0.3;
+      }
+
+      .big-categories article h1 {
+        cursor: pointer;
+      }
+
+      .big-categories article:hover {
+        color: rgb(255, 185, 22);
+        font-size: 1.1em;
+        opacity: 1;
+      }
+
+      #spirituality-cat {
+        background-image: url("./assets/spiritualite.jpg");
+      }
+
+      #youth-cat {
+        background-image: url("./assets/jeunesse.jpg");
+      }
+
+      #cameroun-cat {
+        background-image: url("./assets/cameroun.jpg");
+      }
+
+      .confetti-wrapper {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 150;
+      }
+
+      .confetti {
+        width: 100px;
+        height: 10px;
+        position: absolute;
+        background: red;
+        border-radius: 50%;
+      }
+
+      #foundation-date-div {
+        color: rgb(22, 251, 255);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a class="explodeBtn" href="#home">Accueil</a></li>
+        <li><a href="#about">Spiritualit&eacute;</a></li>
+        <li><a href="#youth">Jeunesse</a></li>
+        <li><a href="#cameroun">Cameroun</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Landing page -->
+    <aside id="landing-page"></aside>
+    <!-- Main content -->
+    <section class="content">
+      <div class="section one explodeBtn">
+        <h1>✝ <br /><br />Les Franciscains de l'Emmanuel <br /><br /></h1>
+        <div class="confetti-wrapper"></div>
+      </div>
+      <div class="section two">
+        <h3>
+          "Car, quiconque fait la volonté de mon Père qui est dans les cieux,
+          celui-là est mon frère, ma sœur et ma mère." <br />
+          <br />
+          - Matthieu 12:50
+        </h3>
+      </div>
+      <div class="section three">
+        <aside class="big-categories">
+          <article id="spirituality-cat">
+            <h1>Spiritualit&eacute;<br />✝</h1>
+          </article>
+          <article id="youth-cat">
+            <h1>Jeunesse <br />🎉</h1>
+          </article>
+          <article id="cameroun-cat">
+            <h1>Cameroun <br />❤️</h1>
+          </article>
+        </aside>
+      </div>
+      <div class="section four">
+        <h3>Dans les pas de Saint-Fran&ccedil;ois depuis plus de 40 ans.</h3>
+        <h1>
+          1978<br />
+          Ville de Montr&eacute;al<br />
+          &<br />
+          2003<br />
+          Cameroun
+        </h1>
+        <h4>Paroisse St-Charles, 2111 rue du Centre</h4>
+      </div>
+      <div class="section five">
+        <h5>Fr&egrave;re Denis-Antoine</h1>
+        <h5>Fr&egrave;re Manuel Andr&eacute;</h1>
+        <h5>Fr&egrave;re Alain Latendresse</h1>
+        <h5>Fr&egrave;re Jeremy Joly</h1>
+      </div>
+    </section>
+  </body>
+  <script src="./libs/minified/gsap.min.js"></script>
+  <script src="./libs/minified/ScrollTrigger.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document
+        .getElementsByClassName("explodeBtn")[0]
+        .addEventListener("click", triggerConfetti);
+      document
+        .getElementsByClassName("explodeBtn")[0]
+        .addEventListener("touchstart", (event) => {
+          event.preventDefault(); // Prevents unintended behavior on mobile
+          triggerConfetti();
+        });
+      triggerConfetti(); // Run animation when document fully loads
+    });
+
+    function triggerConfetti() {
+      const confettiContainer = document.querySelector(".confetti-wrapper");
+
+      // Clear existing confetti before spawning new ones
+      confettiContainer.innerHTML = "";
+
+      for (let i = 0; i < 30; i++) {
+        let confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        confetti.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`; // Random colors
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.top = `${Math.random() * 50 + 50}%`; // Random vertical position
+
+        confettiContainer.appendChild(confetti);
+
+        // Animate confetti explosion
+        gsap.to(confetti, {
+          x: `${(Math.random() - 0.5) * 400}`,
+          y: `${Math.random() * -400}`,
+          rotation: Math.random() * 360,
+          duration: 4,
+          ease: "power3.out",
+          onComplete: () => confetti.remove(), // Removes confetti after animation
+        });
+      }
+    }
+  </script>
+  <script>
+    // Create a timeline
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".content",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+
+    // Add animations to timeline
+    tl.from(".one", {
+      opacity: 0.8,
+      duration: 2,
+    })
+      .from(".one h1", {
+        opacity: 0.8,
+        duration: 2,
+      })
+      .from(".two", {
+        x: -250,
+        opacity: 0,
+        duration: 4,
+      })
+      .from(".three", {
+        rotation: -180,
+        scale: 0.5,
+        opacity: 0,
+        duration: 4,
+      })
+      .from(".four", {
+        opacity: 0.8,
+        duration: 12,
+      })
+      .from(".five", {
+        opacity: 0.8,
+        duration: 12,
+      });
+
+    // Keep each section pinned to the top as we scroll down
+    gsap.utils.toArray(".section").forEach((section) => {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top", // Pin when the section reaches the top
+          end: "bottom top", // Release when scrolling past
+          scrub: true, // Smooth transition
+          pin: true, // Keeps the section fixed temporarily
+        },
+      });
+    });
+  </script>
+</html>
