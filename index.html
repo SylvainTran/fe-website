@@ -15,11 +15,12 @@
     />
     <title>Les Franciscains de l'Emmanuel</title>
     <style>
-      body, html {
+      body,
+      html {
         margin: 0;
         font-family: Arial, sans-serif;
         overflow-x: hidden;
-		background-color: #072771;
+        background-color: #072771;
       }
 
       .navbar {
@@ -51,7 +52,7 @@
       .navbar a {
         text-decoration: none;
         color: white;
-        font-size: 18px;
+        font-size: 1.5em;
       }
 
       .navbar a:hover {
@@ -138,18 +139,51 @@
         color: white;
 
         display: flex;
-        align-content: space-between;
+        align-content: center;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        overflow: hidden;
+        /* overflow: hidden; */
 
-		text-align: center;
+        text-align: center;
       }
 
-	  .five h5 {
-		  margin: 2em;
-	  }
+      .five h1,
+      .five h2,
+      .five h3,
+      .five h4,
+      .five h5,
+      .five h6,
+      .five h7 {
+        margin: 2em;
+      }
+
+      .six {
+        background: linear-gradient(to bottom, #8af7e8, #0eb39d);
+        font-family: "Yomogi", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        /* overflow: hidden; */
+
+        text-align: center;
+      }
+
+      .six h1,
+      .six h2,
+      .six h3,
+      .six h4,
+      .six h5,
+      .six h6,
+      .six h7 {
+        margin: 2em;
+      }
 
       .two h1,
       .two h3 {
@@ -248,7 +282,7 @@
     <nav class="navbar">
       <ul>
         <li><a class="explodeBtn" href="#home">Accueil</a></li>
-        <li><a href="#about">Spiritualit&eacute;</a></li>
+        <li><a href="#spirituality">Spiritualit&eacute;</a></li>
         <li><a href="#youth">Jeunesse</a></li>
         <li><a href="#cameroun">Cameroun</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -295,11 +329,21 @@
         <h4>Paroisse St-Charles, 2111 rue du Centre</h4>
       </div>
       <div class="section five">
-        <h5>Fr&egrave;re Denis-Antoine</h1>
-        <h5>Fr&egrave;re Manuel Andr&eacute;</h1>
-        <h5>Fr&egrave;re Alain Latendresse</h1>
-        <h5>Fr&egrave;re Jeremy Joly</h1>
+        <h6>Membres r&eacute;guliers</h6>
+        <h5>Fr&egrave;re Denis-Antoine</h5>
+        <h5>Fr&egrave;re Manuel Andr&eacute;</h5>
+        <h5>Fr&egrave;re Alain Latendresse</h5>
+        <h5>Fr&egrave;re Jeremy Joly</h5>
       </div>
+      <!-- <div class="section six">
+        <h6>Membres s&eacute;culiers</h6>
+        <h7>Johanne</h7>
+        <h7>Mathieu Boulevas</h7>
+        <h7>Lucie Noel</h7>
+        <h7>Alina</h7>
+        <h7>Jennifer Viger</h7>
+        <h7>Sylvain Tran (stagiaire)</h7>
+      </div> -->
     </section>
   </body>
   <script src="./libs/minified/gsap.min.js"></script>
