@@ -95,6 +95,14 @@
         font-weight: 400;
         font-style: normal;
         cursor: pointer;
+
+        text-align: center;
+
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .one h1 {
@@ -104,6 +112,8 @@
 
       .two {
         background: linear-gradient(to bottom, #0f48cf, #072771);
+        background-image: url("assets/stfrancois.jpg");
+        background-blend-mode: soft-light;
         font-family: "Yomogi", cursive;
         font-weight: 400;
         font-style: normal;
@@ -118,6 +128,8 @@
         justify-content: center;
         align-items: center;
         gap: 1em;
+
+        color: white;
       }
 
       .four {
@@ -129,6 +141,16 @@
         font-family: "Londrina Shadow", sans-serif;
         font-weight: 400;
         font-style: normal;
+      }
+
+      .four h1,
+      .four h2,
+      .four h3,
+      .four h4,
+      .four h5,
+      .four h6,
+      .four h7 {
+        margin: 2em;
       }
 
       .five {
@@ -148,7 +170,8 @@
         text-align: center;
       }
 
-      .five h1,
+      .five p,
+      h1,
       .five h2,
       .five h3,
       .five h4,
@@ -186,11 +209,15 @@
       }
 
       .two h1,
-      .two h3 {
+      h2,
+      .two h3,
+      h7 {
         margin-right: 1.5em;
       }
 
-      .two h3 {
+      .two h2,
+      h3,
+      h7 {
         margin-bottom: 1.5em;
         font-style: italic;
       }
@@ -294,14 +321,14 @@
     <section class="content">
       <div class="section one explodeBtn">
         <h1>✝ <br /><br />Les Franciscains de l'Emmanuel <br /><br /></h1>
+        <h7>Au Qu&eacute;bec et au Cameroun</h7>
         <div class="confetti-wrapper"></div>
       </div>
       <div class="section two">
-        <h3>
-          "Car, quiconque fait la volonté de mon Père qui est dans les cieux,
-          celui-là est mon frère, ma sœur et ma mère." <br />
-          <br />
-          - Matthieu 12:50
+        <h3 style="margin: 2em">
+          "Dieu est p&egrave;re. Il a tant aim&eacute; le monde, qu'Il a
+          envoy&eacute; son Fils unique pour qu'Il devienne notre Fr&egrave;re."
+          <br /><br />- Parole de fondation
         </h3>
       </div>
       <div class="section three">
@@ -318,22 +345,30 @@
         </aside>
       </div>
       <div class="section four">
-        <h3>Dans les pas de Saint-Fran&ccedil;ois depuis plus de 40 ans.</h3>
-        <h1>
-          1978<br />
+        <h2>Dans les pas de Saint-Fran&ccedil;ois depuis 40 ans.</h2>
+        <p>
+          1985<br />
           Ville de Montr&eacute;al<br />
           &<br />
-          2003<br />
+          2000<br />
           Cameroun
-        </h1>
-        <h4>Paroisse St-Charles, 2111 rue du Centre</h4>
+        </p>
+        <h4>1220 rue Island, Montr&eacute;al / 514-762-4049</h4>
       </div>
       <div class="section five">
-        <h6>Membres r&eacute;guliers</h6>
-        <h5>Fr&egrave;re Denis-Antoine</h5>
-        <h5>Fr&egrave;re Manuel Andr&eacute;</h5>
-        <h5>Fr&egrave;re Alain Latendresse</h5>
-        <h5>Fr&egrave;re Jeremy Joly</h5>
+        <div>
+          <h6>Membres r&eacute;guliers</h6>
+          <h5>Fr&egrave;re Denis-Antoine (ministre)</h5>
+          <h5>Fr&egrave;re Manuel Andr&eacute;</h5>
+          <h5>Fr&egrave;re Alain Latendresse</h5>
+          <h5>Fr&egrave;re Jeremy Joly</h5>
+          <p>
+            "Seigneur, je t'en prie, que la force br&ucirc;lante et douce de ton
+            amour prenne possession de mon &acirc;me et l'arrache &agrave; tout
+            ce qui est sous le ciel, afin que je meure par amour de ton amour,
+            comme tu as daign&eacute; mourir par amour de mon amour."
+          </p>
+        </div>
       </div>
       <!-- <div class="section six">
         <h6>Membres s&eacute;culiers</h6>
